@@ -7,7 +7,6 @@
   --light-bg: #f9f6f1;
   --muted: #7d8a7f;
   --text-dark: #1a3a52;
-  --bg-warm: #ede5d9;
   --shadow: 0 8px 24px rgba(26, 58, 82, 0.08);
   --shadow-lg: 0 12px 32px rgba(26, 58, 82, 0.12);
   --font-serif: "Playfair Display", serif;
@@ -22,7 +21,7 @@
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-warm);
+  background-color: var(--cream);
   color: var(--text-dark);
   line-height: 1.6;
   letter-spacing: 0.3px;
@@ -60,10 +59,7 @@ a {
   margin: 0 auto;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   font-family: var(--font-serif);
   color: var(--text-dark);
 }
@@ -76,17 +72,13 @@ h1 {
 
 h2 {
   font-size: clamp(1.8rem, 3vw, 2.8rem);
-  line-height: 1.3;
-  margin-bottom: 2rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
 }
 
 h3 {
   font-size: 1.4rem;
-  margin-bottom: 1.2rem;
-  font-weight: 600;
-  letter-spacing: -0.3px;
+  margin-bottom: 1rem;
 }
 
 h4 {
@@ -96,12 +88,10 @@ h4 {
 }
 
 p {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   color: var(--text-dark);
-  opacity: 0.9;
+  opacity: 0.95;
   font-family: var(--font-sans);
-  line-height: 1.7;
-  font-size: 1rem;
 }
 
 .button {
@@ -113,10 +103,7 @@ p {
   background: var(--burgundy);
   color: var(--white);
   font-weight: 600;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   box-shadow: var(--shadow-lg);
   border: none;
   cursor: pointer;
@@ -212,11 +199,7 @@ p {
 /* Hero Section */
 .hero {
   padding: 8rem 0;
-  background: linear-gradient(
-    135deg,
-    rgba(212, 165, 116, 0.08),
-    rgba(139, 69, 19, 0.05)
-  );
+  background: linear-gradient(135deg, rgba(212, 165, 116, 0.08), rgba(139, 69, 19, 0.05));
   text-align: center;
   position: relative;
   background-size: cover;
@@ -251,25 +234,22 @@ p {
 }
 
 .tagline {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--gold);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   font-family: var(--font-sans);
-  line-height: 1.5;
 }
 
 .scripture {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--gold);
   font-style: italic;
   max-width: 800px;
   margin: 0 auto 1.5rem;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
   font-family: var(--font-sans);
-  line-height: 1.6;
-  font-weight: 500;
 }
 
 .hero-actions {
@@ -289,18 +269,14 @@ p {
 
 .theme-section h2 {
   color: var(--gold);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-family: var(--font-serif);
-  font-size: 1.3rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 
 .theme-section h3 {
   color: var(--white);
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: var(--font-serif);
-  line-height: 1.4;
 }
 
 .theme-section .scripture {
@@ -322,104 +298,23 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 3rem;
   align-items: start;
-  justify-items: center;
-  text-align: center;
 }
 
-.welcome-content,
-.mission-content {
+.welcome-content, .mission-content {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
-.welcome-content h2,
-.mission-content h2 {
-  text-transform: capitalize;
-  color: var(--burgundy);
-}
-
-.feature-list,
-.mission-list {
+.feature-list, .mission-list {
   list-style: none;
   display: grid;
-  gap: 0.7rem;
-  margin: 1.5rem 0;
+  gap: 0.8rem;
 }
 
-.feature-list li,
-.mission-list li {
-  padding-left: 1.8rem;
-  color: var(--text-dark);
-  line-height: 1.7;
-  font-weight: 500;
-  position: relative;
-  margin: 0;
-}
-
-.feature-list li:before,
-.mission-list li:before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--burgundy);
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-/* Welcome and Mission Cards */
-.welcome-mission-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2.5rem;
-  margin-top: 2rem;
-}
-
-.welcome-card,
-.mission-card {
-  background: var(--white);
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow-lg);
-  border-top: 5px solid var(--burgundy);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.welcome-card:hover,
-.mission-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(26, 58, 82, 0.15);
-}
-
-.welcome-card h3,
-.mission-card h3 {
-  color: var(--burgundy);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  font-family: var(--font-serif);
-}
-
-.intro-text {
-  color: var(--text-dark);
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-}
-
-.welcome-card h4 {
+.feature-list li, .mission-list li {
+  padding-left: 1.5rem;
   color: var(--navy);
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
-  letter-spacing: 0.02em;
-}
-
-.closing-text {
-  margin-top: 1.5rem;
-  color: var(--text-dark);
-  line-height: 1.8;
-  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 /* Pastor Section */
@@ -433,37 +328,20 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 3rem;
   align-items: start;
-  justify-items: center;
-  text-align: center;
 }
 
 .pastor-image {
   text-align: center;
 }
 
-.pastor-image h3 {
-  margin-top: 1.5rem;
-  color: var(--burgundy);
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-.pastor-title {
-  font-size: 0.95rem;
-  color: var(--gold);
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
 .pastor-photo {
   width: 100%;
   max-width: 280px;
-  height: 280px;
+  height: auto;
   border-radius: 12px;
   box-shadow: var(--shadow-lg);
   margin-bottom: 1.5rem;
   object-fit: cover;
-  object-position: center 100%;
 }
 
 .pastor-title {
@@ -509,16 +387,6 @@ p {
   border-top: 3px solid var(--gold);
 }
 
-.team-member-image {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin: 0 auto 1rem;
-  object-fit: cover;
-  object-position: center 0%;
-  box-shadow: var(--shadow);
-}
-
 .team-member h4 {
   color: var(--burgundy);
   font-size: 0.95rem;
@@ -542,8 +410,7 @@ p {
   margin-top: 2rem;
 }
 
-.activities-box,
-.ministries-meetup {
+.activities-box, .ministries-meetup {
   background: var(--cream);
   padding: 2rem;
   border-radius: 12px;
@@ -552,8 +419,7 @@ p {
   font-family: var(--font-sans);
 }
 
-.activities-box h3,
-.ministries-meetup h3 {
+.activities-box h3, .ministries-meetup h3 {
   color: var(--burgundy);
   font-family: var(--font-serif);
 }
@@ -600,50 +466,44 @@ p {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
   text-align: center;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 1rem;
 }
 
 .ministry-card-main:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(26, 58, 82, 0.15);
+  transform: translateY(-4px);
 }
 
 .ministry-image {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .ministry-card-main h3 {
   color: var(--burgundy);
-  font-size: 1.3rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
   line-height: 1.4;
   font-family: var(--font-serif);
-  font-weight: 700;
 }
 
 .read-more {
   color: var(--burgundy);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.9rem;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition: color 0.2s ease;
   font-family: var(--font-sans);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  display: inline-block;
-  padding-bottom: 0.3rem;
-  border-bottom: 2px solid var(--burgundy);
+  letter-spacing: 0.05em;
 }
 
 .read-more:hover {
-  color: var(--gold);
-  border-bottom-color: var(--gold);
-  transform: translateX(3px);
+  color: var(--navy);
+  text-decoration: underline;
 }
 
 /* Ministry Details */
@@ -656,7 +516,6 @@ p {
   margin-bottom: 3rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(26, 58, 82, 0.1);
-  font-family: var(--font-sans);
 }
 
 .ministry-detail-item:last-child {
@@ -669,13 +528,11 @@ p {
   gap: 0.8rem;
   margin: 1.2rem 0;
   padding-left: 0;
-  font-family: var(--font-sans);
 }
 
 .ministry-benefits li {
-  color: var(--text-dark);
+  color: var(--navy);
   line-height: 1.6;
-  font-family: var(--font-sans);
 }
 
 .ministry-tagline {
@@ -683,7 +540,6 @@ p {
   color: var(--muted);
   margin: 1.5rem 0;
   font-weight: 500;
-  font-family: var(--font-sans);
 }
 
 /* Services */
@@ -700,77 +556,41 @@ p {
 
 .service-box {
   background: var(--white);
-  padding: 2.5rem 2rem;
+  padding: 2rem;
   border-radius: 12px;
   box-shadow: var(--shadow-lg);
-  border-left: 5px solid var(--burgundy);
+  border-left: 4px solid var(--burgundy);
   display: grid;
-  gap: 1.5rem;
-  font-family: var(--font-sans);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-box:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(26, 58, 82, 0.15);
+  gap: 1.2rem;
 }
 
 .service-box h3 {
   color: var(--burgundy);
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
 }
 
 .location {
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: var(--text-dark);
-  font-family: var(--font-sans);
-  font-weight: 500;
-}
-
-.time {
-  font-size: 1rem;
-  color: var(--burgundy);
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--navy);
 }
 
 .time {
   font-weight: 600;
   color: var(--burgundy);
-  font-family: var(--font-sans);
 }
 
 /* Membership */
 .membership-section {
   padding: 4rem 0;
   text-align: center;
-  background: var(--light-bg);
-}
-
-.membership-section h2 {
-  color: var(--burgundy);
-  margin-bottom: 0.5rem;
-  font-weight: 700;
+  background: #f9f6f1;
 }
 
 .membership-section h3 {
-  color: var(--text-dark);
+  color: var(--burgundy);
   font-size: 1.3rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-transform: uppercase;
-  font-family: var(--font-serif);
-  letter-spacing: 0.1em;
-}
-
-.membership-section p {
-  margin-bottom: 2rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Activities */
@@ -787,25 +607,19 @@ p {
 }
 
 .activity-link {
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.5rem;
   background: var(--white);
   border: 2px solid var(--burgundy);
   color: var(--burgundy);
   border-radius: 8px;
-  font-weight: 700;
+  font-weight: 600;
   transition: all 0.3s ease;
   cursor: pointer;
-  font-family: var(--font-sans);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.9rem;
 }
 
 .activity-link:hover {
   background: var(--burgundy);
   color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
 }
 
 .activity-content {
@@ -814,25 +628,19 @@ p {
   border-radius: 12px;
   box-shadow: var(--shadow);
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-bottom: 2rem;
-  font-family: var(--font-sans);
 }
 
 .activity-content h3 {
   color: var(--burgundy);
   font-size: 1.3rem;
-  font-family: var(--font-serif);
-  margin-bottom: 0.5rem;
 }
 
 .activity-content h4 {
-  color: var(--text-dark);
+  color: var(--navy);
   font-size: 1rem;
-  margin-top: 0.8rem;
-  margin-bottom: 0.5rem;
-  font-family: var(--font-serif);
-  font-weight: 700;
+  margin-top: 1.5rem;
 }
 
 .prayer-times {
@@ -852,7 +660,7 @@ p {
 /* Other News */
 .other-news {
   padding: 4rem 0;
-  background: var(--light-bg);
+  background: #f9f6f1;
 }
 
 .news-grid {
@@ -914,64 +722,36 @@ p {
 /* Giving Section */
 .giving-section {
   padding: 4rem 0;
-  background: var(--light-bg);
-}
-
-.giving-section h2 {
-  color: var(--burgundy);
-  margin-bottom: 2.5rem;
-  font-weight: 700;
+  background: #f9f6f1;
 }
 
 .giving-info {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2.5rem;
-  margin: 3rem 0;
+  gap: 2rem;
+  margin: 2rem 0;
 }
 
 .giving-box {
   background: var(--white);
-  padding: 2.5rem;
+  padding: 2rem;
   border-radius: 12px;
   box-shadow: var(--shadow-lg);
-  border-left: 5px solid var(--gold);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.giving-box:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(26, 58, 82, 0.15);
+  border-left: 4px solid var(--gold);
 }
 
 .giving-box h3 {
   color: var(--burgundy);
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.giving-box p {
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-}
-
-.giving-box h4 {
-  color: var(--text-dark);
-  font-weight: 700;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
-  letter-spacing: 0.02em;
+  font-size: 1.2rem;
 }
 
 .account-details {
   background: var(--cream);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 8px;
   margin: 1rem 0;
   display: grid;
-  gap: 0.8rem;
-}
+  gap: 0.5rem;
 }
 
 .account-details p {
@@ -1004,81 +784,51 @@ p {
   text-align: center;
 }
 
-.contact-section h2 {
-  color: var(--burgundy);
-  margin-bottom: 0.5rem;
-}
-
 .contact-section h3 {
-  color: var(--text-dark);
+  color: var(--burgundy);
   font-size: 1.3rem;
-  margin: 1rem 0 2.5rem;
+  margin: 1rem 0 2rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
 }
 
 .contact-info {
   background: var(--white);
-  padding: 3rem 2rem;
+  padding: 2rem;
   border-radius: 12px;
   box-shadow: var(--shadow-lg);
-  border-top: 5px solid var(--burgundy);
+  border-top: 4px solid var(--burgundy);
   max-width: 500px;
   margin: 0 auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-info:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(26, 58, 82, 0.15);
 }
 
 .contact-info p {
-  margin-bottom: 1.2rem;
-  font-size: 1rem;
-  line-height: 1.8;
-  font-weight: 500;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
 }
 
 /* Footer */
 .site-footer {
   background: var(--navy);
   color: var(--white);
-  padding: 4rem 0 2rem;
-  margin-top: 4rem;
-  border-top: 4px solid var(--gold);
+  padding: 3rem 0 1.5rem;
 }
 
 .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 3rem;
-  margin-bottom: 3rem;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .footer-section h4 {
   color: var(--gold);
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
 }
 
 .footer-section ul {
   list-style: none;
   display: grid;
-  gap: 0.8rem;
-}
-
-.footer-section a {
-  color: rgba(255, 255, 255, 0.8);
-  transition: color 0.2s ease;
-  font-weight: 500;
-}
-
-.footer-section a:hover {
-  color: var(--gold);
+  gap: 0.6rem;
 }
 
 .footer-section a {

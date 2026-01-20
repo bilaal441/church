@@ -7,7 +7,6 @@
   --light-bg: #f9f6f1;
   --muted: #7d8a7f;
   --text-dark: #1a3a52;
-  --bg-warm: #ede5d9;
   --shadow: 0 8px 24px rgba(26, 58, 82, 0.08);
   --shadow-lg: 0 12px 32px rgba(26, 58, 82, 0.12);
   --font-serif: "Playfair Display", serif;
@@ -22,7 +21,7 @@
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-warm);
+  background-color: var(--cream);
   color: var(--text-dark);
   line-height: 1.6;
   letter-spacing: 0.3px;
@@ -342,18 +341,16 @@ p {
 .mission-list {
   list-style: none;
   display: grid;
-  gap: 0.7rem;
-  margin: 1.5rem 0;
+  gap: 1rem;
 }
 
 .feature-list li,
 .mission-list li {
-  padding-left: 1.8rem;
+  padding-left: 2rem;
   color: var(--text-dark);
-  line-height: 1.7;
+  line-height: 1.8;
   font-weight: 500;
   position: relative;
-  margin: 0;
 }
 
 .feature-list li:before,
@@ -363,63 +360,7 @@ p {
   left: 0;
   color: var(--burgundy);
   font-weight: 700;
-  font-size: 1.1rem;
-}
-
-/* Welcome and Mission Cards */
-.welcome-mission-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2.5rem;
-  margin-top: 2rem;
-}
-
-.welcome-card,
-.mission-card {
-  background: var(--white);
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow-lg);
-  border-top: 5px solid var(--burgundy);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.welcome-card:hover,
-.mission-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(26, 58, 82, 0.15);
-}
-
-.welcome-card h3,
-.mission-card h3 {
-  color: var(--burgundy);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  font-family: var(--font-serif);
-}
-
-.intro-text {
-  color: var(--text-dark);
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-}
-
-.welcome-card h4 {
-  color: var(--navy);
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
-  letter-spacing: 0.02em;
-}
-
-.closing-text {
-  margin-top: 1.5rem;
-  color: var(--text-dark);
-  line-height: 1.8;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
 }
 
 /* Pastor Section */
@@ -629,21 +570,17 @@ p {
 
 .read-more {
   color: var(--burgundy);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.9rem;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition: color 0.2s ease;
   font-family: var(--font-sans);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  display: inline-block;
-  padding-bottom: 0.3rem;
-  border-bottom: 2px solid var(--burgundy);
+  letter-spacing: 0.05em;
 }
 
 .read-more:hover {
-  color: var(--gold);
-  border-bottom-color: var(--gold);
-  transform: translateX(3px);
+  color: var(--navy);
+  text-decoration: underline;
 }
 
 /* Ministry Details */
@@ -814,7 +751,7 @@ p {
   border-radius: 12px;
   box-shadow: var(--shadow);
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-bottom: 2rem;
   font-family: var(--font-sans);
 }
@@ -823,16 +760,13 @@ p {
   color: var(--burgundy);
   font-size: 1.3rem;
   font-family: var(--font-serif);
-  margin-bottom: 0.5rem;
 }
 
 .activity-content h4 {
   color: var(--text-dark);
   font-size: 1rem;
-  margin-top: 0.8rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
   font-family: var(--font-serif);
-  font-weight: 700;
 }
 
 .prayer-times {
