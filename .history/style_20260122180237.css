@@ -672,188 +672,36 @@ p {
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(26, 58, 82, 0.1);
   font-family: var(--font-sans);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
+  text-align: center;
 }
 
 .ministry-detail-item:last-child {
   border-bottom: none;
 }
 
-.ministry-text {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.ministry-text h2 {
-  font-size: clamp(1.3rem, 4vw, 1.8rem);
-  margin-bottom: 0.5rem;
-}
-
-.ministry-text h3 {
-  font-size: clamp(1rem, 3vw, 1.3rem);
-  margin-bottom: 0.8rem;
-  line-height: 1.4;
-}
-
-.ministry-text h4 {
-  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-  margin: 1rem 0 0.5rem 0;
-  font-weight: 700;
-}
-
-.ministry-text p {
-  font-size: clamp(0.85rem, 2vw, 1rem);
-  line-height: 1.6;
-  margin: 0.5rem 0;
-}
-
-.ministry-detail-image {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(26, 58, 82, 0.15);
-  transition: transform 0.3s ease;
-  object-fit: cover;
-}
-
-.ministry-detail-image:hover {
-  transform: scale(1.02);
-}
-
 .ministry-benefits {
   list-style: none;
   display: grid;
   gap: 0.8rem;
-  margin: 1.2rem 0;
+  margin: 1.2rem auto;
   padding-left: 0;
   font-family: var(--font-sans);
+  max-width: 600px;
+  justify-items: center;
 }
 
 .ministry-benefits li {
   color: var(--text-dark);
   line-height: 1.6;
   font-family: var(--font-sans);
-  font-size: clamp(0.85rem, 2vw, 1rem);
 }
 
 .ministry-tagline {
-  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  font-size: 0.95rem;
   color: var(--muted);
   margin: 1.5rem 0;
   font-weight: 500;
   font-family: var(--font-sans);
-  line-height: 1.5;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .ministry-detail-item {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-
-  .ministry-detail-image {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .ministry-detail-item {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-bottom: 2.5rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .ministry-detail-image {
-    max-width: 100%;
-    order: -1;
-    margin-bottom: 1rem;
-  }
-
-  .ministry-text {
-    gap: 0.8rem;
-  }
-
-  .ministry-text h2 {
-    font-size: clamp(1.1rem, 5vw, 1.5rem);
-  }
-
-  .ministry-text h3 {
-    font-size: clamp(0.9rem, 4vw, 1.1rem);
-  }
-
-  .ministry-text h4 {
-    font-size: clamp(0.8rem, 3vw, 1rem);
-    margin: 0.8rem 0 0.3rem 0;
-  }
-
-  .ministry-text p {
-    font-size: clamp(0.8rem, 3vw, 0.95rem);
-  }
-}
-
-@media (max-width: 480px) {
-  .ministry-detail-item {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .ministry-detail-image {
-    max-width: 100%;
-    height: auto;
-    order: -1;
-  }
-
-  .ministry-text {
-    gap: 0.6rem;
-  }
-
-  .ministry-text h2 {
-    font-size: clamp(1rem, 6vw, 1.3rem);
-    margin-bottom: 0.3rem;
-  }
-
-  .ministry-text h3 {
-    font-size: clamp(0.85rem, 4.5vw, 1rem);
-    margin-bottom: 0.5rem;
-  }
-
-  .ministry-text h4 {
-    font-size: clamp(0.75rem, 3vw, 0.9rem);
-    margin: 0.6rem 0 0.2rem 0;
-  }
-
-  .ministry-text p {
-    font-size: clamp(0.75rem, 2.5vw, 0.9rem);
-    margin: 0.3rem 0;
-  }
-
-  .ministry-benefits {
-    gap: 0.6rem;
-    margin: 0.8rem 0;
-  }
-
-  .ministry-benefits li {
-    font-size: clamp(0.75rem, 2.5vw, 0.9rem);
-  }
-
-  .ministry-tagline {
-    font-size: clamp(0.75rem, 2.5vw, 0.85rem);
-    margin: 1rem 0;
-  }
-
-  .button {
-    font-size: 0.85rem;
-    padding: 0.7rem 1.4rem;
-  }
 }
 
 /* Services */
