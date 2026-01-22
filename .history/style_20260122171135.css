@@ -517,10 +517,6 @@ p {
   object-fit: cover;
   object-position: center 0%;
   box-shadow: var(--shadow);
-  border: 6px solid var(--gold);
-  background: var(--cream);
-  padding: 3px;
-  box-sizing: border-box;
 }
 
 .team-member h4 {
